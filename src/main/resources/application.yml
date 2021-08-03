@@ -9,7 +9,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/autochess?serverTimezone=UTC&characterEncoding=utf8
     username: root
-    password: 123456MyMysql
+    password: 12243003MyMysql
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   servlet:
