@@ -1,10 +1,11 @@
-package com.galaxyinblue.autochess.service.impl;
+package com.galaxyinblue.autochess.service;
 
 import com.galaxyinblue.autochess.entity.AcChess;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service
+
 public interface AcChessService {
-    List<AcChess> listAllChess();
+    List<AcChess> listAllChess(int pageNum,int pageSize);
 }
+

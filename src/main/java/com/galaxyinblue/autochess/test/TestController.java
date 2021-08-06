@@ -1,7 +1,7 @@
 package com.galaxyinblue.autochess.test;
 
 import com.galaxyinblue.autochess.entity.AcChess;
-import com.galaxyinblue.autochess.mapper.AcChessMapper;
+import com.galaxyinblue.autochess.service.AcChessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,11 +12,12 @@ import java.util.List;
 @RequestMapping("/test")
 public class TestController {
     @Autowired
-    private AcChessMapper chessMapper;
+    private AcChessService chessService;
 
-    @RequestMapping("/listAllChess")
-    public List<AcChess> testController(){
-        System.out.println("获取棋子列表测试");
-        return chessMapper.listAllChess();
+    @RequestMapping("/testPageHelper")
+    public List<AcChess> testPageHelper(int pageNum,int pageSize){
+        System.out.println(pageNum);
+        System.out.println(pageSize);
+        return chessService.listAllChess(pageNum,pageSize);
     }
 }

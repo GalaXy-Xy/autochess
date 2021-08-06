@@ -10,9 +10,11 @@ import javax.persistence.Id;
 @Entity(name = "autochess_chess")
 @Data
 public class AcChess {
+
     @Id
-    int chess_id;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int chess_id;
+
     String chess_name;
     int chess_level;
     int chess_attack_capablity;
